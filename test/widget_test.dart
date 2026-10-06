@@ -2,14 +2,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:testproject/main.dart';
 
 void main() {
-  testWidgets('SalaryApp smoke test', (WidgetTester tester) async {
-    // 1. Folosește SalaryApp() în loc de DiscountApp()
-    await tester.pumpWidget(const SalaryApp());
+  testWidgets('FitnessApp smoke test', (WidgetTester tester) async {
+    await tester.pumpWidget(const FitnessApp());
 
-    // 2. Verifică dacă titlul "Salary Calculator" este afișat
-    expect(find.text('Salary Calculator'), findsOneWidget);
+    // Verify greeting text
+    expect(find.text('Good Morning'), findsOneWidget);
 
-    // 3. Verifică dacă butonul de calcul există
-    expect(find.text('Calculate Salary'), findsOneWidget);
+    // Verify challenge card text
+    expect(find.text("Today's Challenge"), findsOneWidget);
+
+    // Verify featured plan title
+    expect(find.text('Featured Plan'), findsOneWidget);
   });
 }
